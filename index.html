@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zachary Harper — Software Engineer</title>
+    <meta name="description" content="Software Engineer specializing in interactive, user-facing systems. React, TypeScript, Node.js, real-time systems." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/coughdrop/dist/coughdrop.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+
+    <!-- NAV -->
+    <nav id="site-nav">
+      <div class="nav-inner container-1200 container-centered flex align-center justify-space-between padding-x-20">
+        <a href="#hero" class="nav-logo">ZH<span class="accent-dot">.</span></a>
+        <ul class="nav-links flex gap-16 align-center">
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">Contact</a></li>
+        </ul>
+        <button id="toggle-theme" class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">◑</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="container-1200 container-centered padding-x-20 hero-layout">
+        <div class="hero-content">
+          <p class="hero-eyebrow fade-up">Based in Silverdale, WA</p>
+          <h1 class="hero-name fade-up font-800">
+            <span class="name-line-1">Zachary</span><br>
+            <span class="name-line-2">Harper</span>
+          </h1>
+          <p class="hero-subtitle fade-up">
+            Software Engineer — <span class="text-primary">Full-Stack &amp; Real-Time Systems</span>
+          </p>
+          <p class="hero-desc fade-up">
+            I build interactive, user-facing systems that feel fast and alive.
+            From peer-to-peer video sessions to payment flows and game engines —
+            I own features end-to-end and ship things people actually use.
+          </p>
+          <div class="flex gap-16 flex-wrap fade-up margin-top-20">
+            <a href="#experience" class="button button-primary">View my work</a>
+            <a href="mailto:zacharyfoutz@gmail.com" class="button button-ghost">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-terminal fade-up">
+          <div class="terminal-bar flex align-center gap-8 padding-8">
+            <span class="t-dot t-dot-red"></span>
+            <span class="t-dot t-dot-yellow"></span>
+            <span class="t-dot t-dot-green"></span>
+            <span class="terminal-title margin-left-auto">zachary-harper.sh</span>
+          </div>
+          <div class="terminal-body padding-16">
+            <div class="t-line"><span class="t-prompt">~ $</span> <span class="t-cmd">whoami</span></div>
+            <div class="t-line t-output">zachary harper</div>
+            <div class="t-line">&nbsp;</div>
+            <div class="t-line"><span class="t-prompt">~ $</span> <span class="t-cmd">cat skills.json</span></div>
+            <div class="t-line t-output">{</div>
+            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"languages"</span>: <span class="t-val">["JS", "TS", "PHP", "C++"]</span>,</div>
+            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"frontend"</span>: <span class="t-val">["React", "CSS", "Storybook"]</span>,</div>
+            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"backend"</span>: <span class="t-val">["Node.js", "APIs"]</span>,</div>
+            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"years_exp"</span>: <span class="t-val">10</span></div>
+            <div class="t-line t-output">}</div>
+            <div class="t-line">&nbsp;</div>
+            <div class="t-line"><span class="t-prompt">~ $</span> <span class="cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section-alt">
+      <div class="container-1200 container-centered padding-x-20">
+        <div class="section-header margin-bottom-20">
+          <p class="section-label fade-up">Capabilities</p>
+          <h2 class="section-title fade-up font-800">Skills &amp; Technologies</h2>
+        </div>
+        <div class="skills-grid fade-up">
+          <div class="skill-cell">
+            <p class="skill-cell-label">Languages</p>
+            <div class="flex flex-wrap gap-8">
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">PHP</span>
+              <span class="tag">C++</span>
+            </div>
+          </div>
+          <div class="skill-cell">
+            <p class="skill-cell-label">Frontend</p>
+            <div class="flex flex-wrap gap-8">
+              <span class="tag">React</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Storybook</span>
+            </div>
+          </div>
+          <div class="skill-cell">
+            <p class="skill-cell-label">Backend</p>
+            <div class="flex flex-wrap gap-8">
+              <span class="tag">Node.js</span>
+              <span class="tag">API Development</span>
+            </div>
+          </div>
+          <div class="skill-cell">
+            <p class="skill-cell-label">Systems</p>
+            <div class="flex flex-wrap gap-8">
+              <span class="tag">Real-time</span>
+              <span class="tag">WebRTC</span>
+              <span class="tag">State Management</span>
+              <span class="tag">UI/UX</span>
+            </div>
+          </div>
+          <div class="skill-cell">
+            <p class="skill-cell-label">Tools</p>
+            <div class="flex flex-wrap gap-8">
+              <span class="tag">Git</span>
+              <span class="tag">Jira</span>
+              <span class="tag">SSH</span>
+              <span class="tag">VIM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container-1200 container-centered padding-x-20">
+        <div class="section-header margin-bottom-20">
+          <p class="section-label fade-up">Career</p>
+          <h2 class="section-title fade-up font-800">Experience</h2>
+        </div>
+        <div class="experience-list flex flow-column gap-4">
+
+          <div class="exp-item fade-up">
+            <div class="exp-header flex justify-space-between align-start padding-20">
+              <div>
+                <h3 class="exp-role font-700">Software Alchemist</h3>
+                <p class="exp-company">Boom Learning</p>
+              </div>
+              <span class="exp-period">Nov 2020 – Present</span>
+            </div>
+            <div class="exp-body padding-20">
+              <ul class="exp-bullets flex flow-column gap-8">
+                <li>Built and improved payment and checkout flows to support user onboarding and purchases</li>
+                <li>Designed and developed a custom store experience for schools and managed teacher accounts</li>
+                <li>Created a new user sign-up flow to simplify onboarding</li>
+                <li>Developed a dashboard to give users better access to reports and seller data</li>
+                <li>Built and maintained a peer-to-peer system for screen sharing and live user sessions</li>
+                <li>Collaborated with design and engineering teams to deliver customer-facing features</li>
+                <li>Introduced Storybook to improve UI consistency and development workflow</li>
+                <li>Led and mentored a small team of UI/UX developers</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item fade-up">
+            <div class="exp-header flex justify-space-between align-start padding-20">
+              <div>
+                <h3 class="exp-role font-700">Software Developer</h3>
+                <p class="exp-company">Sleepless Inc.</p>
+              </div>
+              <span class="exp-period">Aug 2017 – Aug 2020</span>
+            </div>
+            <div class="exp-body padding-20">
+              <ul class="exp-bullets flex flow-column gap-8">
+                <li>Built and maintained web application features using PHP, JavaScript, HTML, and CSS</li>
+                <li>Worked directly on remote servers using SSH and VIM</li>
+                <li>Used Git for version control, change tracking, and collaboration</li>
+                <li>Designed and implemented custom UI elements, graphics, and layouts</li>
+                <li>Developed and published browser-based games using JavaScript</li>
+                <li>Built a custom game engine in C++ and recreated it in JavaScript</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item fade-up">
+            <div class="exp-header flex justify-space-between align-start padding-20">
+              <div>
+                <h3 class="exp-role font-700">Freelance Web Developer</h3>
+                <p class="exp-company">Self-employed</p>
+              </div>
+              <span class="exp-period">Sep 2014 – Aug 2017</span>
+            </div>
+            <div class="exp-body padding-20">
+              <ul class="exp-bullets flex flow-column gap-8">
+                <li>Designed and developed websites and web applications for various clients</li>
+                <li>Delivered end-to-end solutions from design through deployment</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-alt">
+      <div class="container-1200 container-centered padding-x-20">
+        <div class="section-header margin-bottom-20">
+          <p class="section-label fade-up">Work</p>
+          <h2 class="section-title fade-up font-800">Featured Projects</h2>
+        </div>
+        <div class="projects-grid fade-up">
+
+          <div class="project-card">
+            <span class="project-number">01</span>
+            <h3 class="project-title font-700">Peer-to-Peer Screen Sharing</h3>
+            <p class="project-desc">Built a real-time WebRTC-powered screen sharing and live session system used by educators on Boom Learning — enabling live teacher-student interactions at scale.</p>
+            <div class="flex flex-wrap gap-8 margin-top-8">
+              <span class="tag">WebRTC</span><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Real-time</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-number">02</span>
+            <h3 class="project-title font-700">School Store &amp; Checkout</h3>
+            <p class="project-desc">Designed and implemented a full custom store experience for K-12 schools, covering browsing, purchasing, and teacher account management with streamlined payment flows.</p>
+            <div class="flex flex-wrap gap-8 margin-top-8">
+              <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Payments API</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-number">03</span>
+            <h3 class="project-title font-700">Analytics Dashboard</h3>
+            <p class="project-desc">Developed a seller and reports dashboard giving creators and admins deeper visibility into product performance, user data, and sales metrics.</p>
+            <div class="flex flex-wrap gap-8 margin-top-8">
+              <span class="tag">React</span><span class="tag">JavaScript</span><span class="tag">CSS</span><span class="tag">Data Viz</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-number">04</span>
+            <h3 class="project-title font-700">Browser-Based Game Engine</h3>
+            <p class="project-desc">Engineered a custom game engine from scratch in C++, then ported the entire system to JavaScript for browser deployment, shipping multiple playable games.</p>
+            <div class="flex flex-wrap gap-8 margin-top-8">
+              <span class="tag">C++</span><span class="tag">JavaScript</span><span class="tag">Canvas API</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-number">05</span>
+            <h3 class="project-title font-700">UI Component System</h3>
+            <p class="project-desc">Introduced Storybook to Boom Learning's engineering workflow, building a shared component library that improved consistency and accelerated front-end development across the team.</p>
+            <div class="flex flex-wrap gap-8 margin-top-8">
+              <span class="tag">Storybook</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">CSS</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-number">06</span>
+            <h3 class="project-title font-700">User Onboarding Flow</h3>
+            <p class="project-desc">Rebuilt the sign-up and onboarding experience to reduce friction and improve conversion — coordinating closely with design to deliver a polished, intuitive first-run experience.</p>
+            <div class="flex flex-wrap gap-8 margin-top-8">
+              <span class="tag">React</span><span class="tag">UX Design</span><span class="tag">JavaScript</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / CONTACT -->
+    <section id="about">
+      <div class="container-1200 container-centered padding-x-20">
+        <div class="section-header margin-bottom-20">
+          <p class="section-label fade-up">About</p>
+          <h2 class="section-title fade-up font-800">Let's Build Something</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text fade-up">
+            <p>I'm a software engineer based in Silverdale, WA with over a decade of experience building products people actually use. My focus is on interactive, user-facing systems — the kind that feel fast, polished, and alive.</p>
+            <p class="margin-top-16">At Boom Learning, I've owned features end-to-end: from real-time peer-to-peer sessions to payment flows, onboarding experiences, and seller dashboards. I care about both the technical craft and the human experience on the other side of the screen.</p>
+            <p class="margin-top-16">When I'm not shipping product features, I'm building game engines, tinkering with low-level systems, or exploring new ways to push the web forward.</p>
+            <a href="mailto:zacharyfoutz@gmail.com" class="button button-primary margin-top-20" style="display:inline-flex;">Say hello →</a>
+          </div>
+
+          <div class="fade-up">
+            <p class="section-label margin-bottom-16">Connect</p>
+            <div class="contact-links flex flow-column gap-4">
+              <a href="https://github.com/Zafuzi" target="_blank" rel="noopener noreferrer" class="contact-link flex align-center justify-space-between">
+                <span class="flex align-center gap-16">
+                  <span class="contact-icon">⌥</span>
+                  <span>
+                    <span class="contact-link-name">GitHub</span>
+                    <span class="contact-link-sub">github.com/Zafuzi</span>
+                  </span>
+                </span>
+                <span class="contact-arrow">→</span>
+              </a>
+              <a href="https://linkedin.com/in/zacharyfoutz" target="_blank" rel="noopener noreferrer" class="contact-link flex align-center justify-space-between">
+                <span class="flex align-center gap-16">
+                  <span class="contact-icon">⊞</span>
+                  <span>
+                    <span class="contact-link-name">LinkedIn</span>
+                    <span class="contact-link-sub">linkedin.com/in/zacharyfoutz</span>
+                  </span>
+                </span>
+                <span class="contact-arrow">→</span>
+              </a>
+              <a href="mailto:zacharyfoutz@gmail.com" class="contact-link flex align-center justify-space-between">
+                <span class="flex align-center gap-16">
+                  <span class="contact-icon">✉</span>
+                  <span>
+                    <span class="contact-link-name">Email</span>
+                    <span class="contact-link-sub">zacharyfoutz@gmail.com</span>
+                  </span>
+                </span>
+                <span class="contact-arrow">→</span>
+              </a>
+              <a href="tel:+13609900694" class="contact-link flex align-center justify-space-between">
+                <span class="flex align-center gap-16">
+                  <span class="contact-icon">◈</span>
+                  <span>
+                    <span class="contact-link-name">Phone</span>
+                    <span class="contact-link-sub">(360) 990-0694</span>
+                  </span>
+                </span>
+                <span class="contact-arrow">→</span>
+              </a>
+            </div>
+
+            <div class="edu-card margin-top-16">
+              <p class="section-label margin-bottom-8" style="font-size:10px;">Education</p>
+              <p class="edu-school font-700">Olympic College</p>
+              <p class="edu-degree">A.A.S. Information Technology, Web Development · 2014–2017</p>
+              <div class="flex flex-wrap gap-8 margin-top-12">
+                <span class="tag">Front End Developer — Udacity '14</span>
+                <span class="tag">CompTIA+ '15</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container-1200 container-centered padding-x-20 flex align-center justify-space-between">
+        <p class="footer-copy">© 2026 <span class="text-primary">Zachary Harper</span> — Silverdale, WA</p>
+        <div class="flex gap-16">
+          <a href="https://github.com/Zafuzi" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+          <a href="https://linkedin.com/in/zacharyfoutz" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+          <a href="mailto:zacharyfoutz@gmail.com" class="footer-link">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/coughdrop/dist/theme-switcher.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
