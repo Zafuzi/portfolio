@@ -328,7 +328,7 @@
   flex-basis: 100%;
 }
 .flow-row {
-  flex-direction: row nowrap;
+  flex-flow: row nowrap;
 }
 .flow-row-reverse {
   flex-flow: row-reverse nowrap;
