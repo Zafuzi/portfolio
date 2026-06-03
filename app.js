@@ -12,7 +12,7 @@ const jsonParser = bodyParser.json();
 const resend = new Resend(process.env.RESEND_API_KEY);
 const sanitizer = new Sanitizer();
 
-app.use(express.static('public'));
+app.use(express.static(path.join(import.meta.dirname, 'public')));
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
