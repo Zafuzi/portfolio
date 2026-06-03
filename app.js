@@ -16,7 +16,7 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', path.join(import.meta.dirname, "views"));
 
-app.use(express.static(path.join(import.meta.dirname, 'public')));
+app.use("/public", express.static(path.join(import.meta.dirname, 'public')));
 
 function okay(data, req, res) {
 	console.log("\tOKAY", data ?? "OKAY");
