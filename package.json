@@ -4,12 +4,17 @@
   "version": "1.0.1",
   "type": "module",
   "scripts": {
-    "dev": "npx vite",
-    "build": "npx vite build",
-    "preview": "npx vite preview"
+    "dev": "npx nodemon src/app.js",
+    "start": "node src/app.js"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "body-parser": "^2.2.2",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-handlebars": "^9.0.1",
+    "resend": "^6.12.4",
+    "sanitize": "^2.1.2",
+    "strip": "^3.0.0"
   },
   "devDependencies": {
     "vite": "^8.0.16"
