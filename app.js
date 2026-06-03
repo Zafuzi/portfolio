@@ -18,9 +18,21 @@ app.set('views', path.join(import.meta.dirname, "views"));
 
 app.use(express.static(path.join(import.meta.dirname, 'public')));
 
+function okay(data, req, res) {
+	console.log("\tOKAY", data ?? "OKAY");
+	res.send(data ?? "OKAY");
+	res.status(200);
+	res.end();
+}
+
+app.use((req, res, next) => {
+	console.log(`${req.method} ${req.originalUrl}`);
+	next();
+});
+
 app.get("/", (req, res) => {
 	res.render("home");
-})
+});
 
 app.post("/send_message", jsonParser, (req, res) => {
 	const message = strip(sanitizer.str(req.body.message));
@@ -40,9 +52,8 @@ app.post("/send_message", jsonParser, (req, res) => {
 		},
 	});
 
-	res.status(200);
-	res.end();
-})
+	okay("message sent", req, res);
+});
 
 app.listen(3001, function () {
 	console.log('Your app is listening on port 3001');
