@@ -55,6 +55,6 @@ app.post("/send_message", jsonParser, (req, res) => {
 	okay("message sent", req, res);
 });
 
-app.listen(3001, function () {
+app.listen(3000, function () {
 	console.log('Your app is listening on port 3001');
 });
