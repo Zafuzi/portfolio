@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	--radius: 5px;
 }
 
 body,
@@ -22,5 +23,19 @@ h6 {
 }
 
 ul {
+	margin-left: 0;
+	padding-left: 0;
 	margin-bottom: 1em;
+	list-style-type: none;
+}
+
+ul li {
+	padding-left: 1em;
+}
+
+section {
+	margin: 8px;
+	padding: 8px 16px;
+	background-color: rgba(218, 219, 235, 0.8);
+	border-radius: var(--radius);
 }
