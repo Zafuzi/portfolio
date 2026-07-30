@@ -60,6 +60,12 @@ section {
 	border: 2px solid var(--border);
 }
 
+section img {
+	width: 100%;
+	object-fit: contain;
+	margin: 1em auto;
+}
+
 a {
 	color: var(--link);
 }
