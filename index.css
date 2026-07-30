@@ -1,6 +1,13 @@
 * {
 	box-sizing: border-box;
 	--radius: 5px;
+	--primary: #012f70;
+	--secondary: #f57600;
+	--bg: color-mix(in srgb, var(--primary), black 50%);
+	--fg: color-mix(in srgb, var(--primary), white 80%);
+	--link: color-mix(in srgb, var(--primary), white 95%);
+	--link: var(--secondary);
+	--border: var(--primary);
 }
 
 body,
@@ -8,8 +15,8 @@ html {
 	font-size: 1rem;
 	font-weight: 500;
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	background-color: #FFFFF6;
-	color: #010101;
+	background-color: var(--bg);
+	color: var(--fg);
 }
 
 h1,
@@ -30,7 +37,7 @@ ul {
 }
 
 ul li {
-	padding-left: 1em;
+	padding: 4px 8px;
 }
 
 header {
@@ -48,6 +55,19 @@ footer {
 section {
 	margin: 8px;
 	padding: 8px 16px;
-	background-color: rgba(218, 219, 235, 0.8);
+	background-color: color-mix(in srgb, var(--bg), var(--fg) 10%);
 	border-radius: var(--radius);
+	border: 2px solid var(--border);
+}
+
+a {
+	color: var(--link);
+}
+
+a:hover {
+	color: color-mix(in srgb, var(--link), var(--fg) 50%);
+}
+
+a:visited {
+	color: color-mix(in srgb, var(--link), var(--fg) 50%);
 }
