@@ -33,6 +33,18 @@ ul li {
 	padding-left: 1em;
 }
 
+header {
+	max-width: 900px;
+	margin: 0 auto 0 auto;
+	padding: 8px 0;
+}
+
+main,
+footer {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
 section {
 	margin: 8px;
 	padding: 8px 16px;
