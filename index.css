@@ -1,14 +1,34 @@
 * {
 	box-sizing: border-box;
 	--radius: 5px;
-	--primary: #012f70;
-	--secondary: #f57600;
-	--bg: color-mix(in srgb, var(--primary), black 50%);
-	--fg: color-mix(in srgb, var(--primary), white 80%);
-	--link: color-mix(in srgb, var(--primary), white 95%);
-	--link: var(--secondary);
-	--border: var(--primary);
+	--primary: #000;
+	--secondary: #fff;
 	--gallery-img-size: 100px;
+}
+
+body[data-theme="blue"] {
+	--primary: #0A174E;
+	--secondary: #F5D042;
+}
+
+body[data-theme="red"] {
+	--primary: #1b1917;
+	--secondary: #ec594c;
+}
+
+body[data-theme="green"] {
+	--primary: #02343F;
+	--secondary: #F0EDCC;
+}
+
+body[data-theme="dark"] {
+	--primary: #010101;
+	--secondary: #fafafa;
+}
+
+body[data-theme="light"] {
+	--primary: #fafafa;
+	--secondary: #010101;
 }
 
 body,
@@ -16,8 +36,25 @@ html {
 	font-size: 1rem;
 	font-weight: 500;
 	font-family: Georgia, 'Times New Roman', Times, serif;
+
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+
+
+	--bg: color-mix(in srgb, var(--primary), black 3%);
+	--fg: color-mix(in srgb, var(--secondary), white 40%);
+
+	--button-bg: var(--secondary);
+	--button-fg: var(--primary);
+
+	--border: color-mix(in srgb, var(--bg), var(--fg) 10%);
+	--link: var(--secondary);
+
 	background-color: var(--bg);
 	color: var(--fg);
+
+	font-size: 16px;
 }
 
 h1,
@@ -45,6 +82,20 @@ header {
 	max-width: 900px;
 	margin: 0 auto 0 auto;
 	padding: 8px 0;
+	place-items: center center;
+	text-align: center;
+}
+
+header nav {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: start;
+	gap: 32px;
+}
+
+header nav a {
+	text-decoration: none;
 }
 
 main,
@@ -56,9 +107,15 @@ footer {
 section {
 	margin: 8px;
 	padding: 8px 16px;
-	background-color: color-mix(in srgb, var(--bg), var(--fg) 10%);
+	background-color: color-mix(in srgb, var(--bg), white 5%);
 	border-radius: var(--radius);
 	border: 2px solid var(--border);
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 a {
@@ -73,8 +130,37 @@ a:visited {
 	color: color-mix(in srgb, var(--link), var(--fg) 50%);
 }
 
+button {
+	padding: 8px 16px;
+	font-weight: bold;
+	background-color: var(--button-bg);
+	color: var(--button-fg);
+	border: 1px solid var(--button-fg);
+	cursor: pointer;
+	border-radius: var(--radius);
+	font-size: 18px;
+}
+
 main {
 	position: relative;
+}
+
+#themeSwitcher {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+button {
+	opacity: 0.8;
+}
+
+button:hover,
+button:active,
+button:focus {
+	opacity: 1;
 }
 
 .gallery {
@@ -94,9 +180,6 @@ main {
 	z-index: 1;
 	transform: scale(1);
 }
-
-
-.gallery:has(img:hover) img:not(:hover) {}
 
 .gallery a:focus {
 	outline: 1px dashed black;

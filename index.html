@@ -8,35 +8,27 @@
 	<link rel="stylesheet" href="index.css" />
 </head>
 
-<body>
+<body data-theme="blue">
 	<header>
-		<h1>Zachary Harper</h1>
-		<em>Software Engineer</em>
-		<hr />
+		<h1>Zachary Harper - <em>Software Engineer</em></h1>
 		<nav>
-			<a href="#links">Links</a> |
-			<a href="#experience">Experience</a> |
-			<a href="#projects">Projects</a>
+			<a href="https://github.com/zafuzi" target="_blank">Github</a>
+			<a href="www.linkedin.com/in/zachthedev" target="_blank">LinkedIn</a>
+			<a href="mailto:zacharyfoutz@gmail.com" target="_blank">E-Mail</a>
 		</nav>
+
 	</header>
 
 	<main>
-		<article>
-			<section id="links">
-				<h2>Links</h2>
-				<ul>
-					<li>
-						<a href="https://github.com/zafuzi" target="_blank">Github</a>
-					</li>
-					<li>
-						<a href="www.linkedin.com/in/zachthedev" target="_blank">LinkedIn</a>
-					</li>
-					<li>
-						<a href="mailto:zacharyfoutz@gmail.com" target="_blank">E-Mail</a>
-					</li>
-				</ul>
-			</section>
+		<div id="themeSwitcher">
+			<button data-theme="blue">Blue</button>
+			<button data-theme="red">Red</button>
+			<button data-theme="green">Green</button>
+			<button data-theme="dark">Dark</button>
+			<button data-theme="light">Light</button>
+		</div>
 
+		<article>
 			<section id="experience">
 				<h2>Experience</h2>
 				<ul>
@@ -83,9 +75,9 @@
 						<a href="https://zafuzi.itch.io" target="_blank">Games (itch.io)</a>
 					</li>
 				</ul>
+			</section>
 
-				<hr />
-
+			<section>
 				<h3>Designs</h3>
 
 				<h3>American Service Medicar</h3>
@@ -148,13 +140,26 @@
 	</main>
 
 	<footer>
-		<small><em>References available upon request</em></small>
+		<em>References available upon request</em>
 	</footer>
 
 	<script defer>
 		(() => {
 			const images = document.querySelectorAll(".gallery img");
 			const viewer = document.querySelector("#viewbox");
+			const themer = document.querySelector("#themeSwitcher");
+			const themeButtons = themer.querySelectorAll("button")
+
+			document.body.dataset.theme = localStorage.getItem("theme") ?? "blue";
+
+			themeButtons.forEach(button => {
+				button.addEventListener("click", (ev) => {
+					ev.preventDefault();
+
+					document.body.dataset.theme = button.dataset.theme;
+					localStorage.setItem("theme", button.dataset.theme);
+				});
+			})
 
 			document.addEventListener("keydown", (ev) => {
 				switch (ev.key) {
