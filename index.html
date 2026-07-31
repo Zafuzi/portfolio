@@ -85,28 +85,72 @@
 				</ul>
 
 				<hr />
+
 				<h3>Designs</h3>
-				<figure>
-					<img src="screenshots/ASM.png" alt="Project Design for American Service Medicar" />
-					<figcaption>American Service Medicar</figcaption>
-				</figure>
 
-				<figure>
-					<img src="screenshots/nodes.png" alt="Project Design for Nodes App" />
-					<figcaption>Nodes App</figcaption>
-				</figure>
+				<h3>American Service Medicar</h3>
+				<div class="gallery">
+					<img src="screenshots/asm/001.png" />
+					<img src="screenshots/asm/002.png" />
+					<img src="screenshots/asm/003.png" />
+					<img src="screenshots/asm/004.png" />
+				</div>
 
-				<figure>
-					<img src="screenshots/Squids.png" alt="Project Design for Squids Game Engine" />
-					<figcaption>Squids Game Engine</figcaption>
-				</figure>
+				<h3>Nodes</h3>
+				<div class="gallery">
+					<img src="screenshots/nodes/002.png" />
+					<img src="screenshots/nodes/003.png" />
+					<img src="screenshots/nodes/004.png" />
+					<img src="screenshots/nodes/005.png" />
+				</div>
+
+				<h3>Brazen</h3>
+				<div class="gallery">
+					<img src="screenshots/brazen/001.png" />
+					<img src="screenshots/brazen/002.png" />
+					<img src="screenshots/brazen/003.png" />
+					<img src="screenshots/brazen/004.png" />
+				</div>
 			</section>
 		</article>
+
+		<div id="viewbox" class="modal" data-open="false" aria-modal="true"
+			aria-roledescription="A modal for viewing images fullscreen">
+		</div>
+
 	</main>
 
 	<footer>
 		<small><em>References available upon request</em></small>
 	</footer>
+
+	<script defer>
+		(() => {
+			const images = document.querySelectorAll(".gallery img");
+			const viewer = document.querySelector("#viewbox");
+
+			document.addEventListener("keydown", (ev) => {
+				switch (ev.key) {
+					case "Escape":
+					case " ":
+					case "Enter":
+						viewer.dataset.open = false;
+						break;
+				}
+			});
+
+			images.forEach(img => {
+				img.addEventListener("click", () => {
+					viewer.innerHTML = img.outerHTML;
+					viewer.dataset.open = true;
+				})
+			});
+
+			viewer.addEventListener("click", () => {
+				viewer.dataset.open = false;
+			})
+		})();
+	</script>
 </body>
 
 </html>
