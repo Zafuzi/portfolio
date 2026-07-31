@@ -20,6 +20,6 @@
 	},
 	"homepage": "https://github.com/zafuzi/portfolio#readme",
 	"devDependencies": {
-		"vite": "^8.2.0"
+		"vite": "^7.3.6"
 	}
 }
