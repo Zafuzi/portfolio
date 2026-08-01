@@ -22,13 +22,13 @@ body[data-theme="green"] {
 }
 
 body[data-theme="dark"] {
-	--primary: #010101;
+	--primary: #140c06;
 	--secondary: #fafafa;
 }
 
 body[data-theme="light"] {
-	--primary: #fafafa;
-	--secondary: #010101;
+	--primary: #847c75;
+	--secondary: #fafafa;
 }
 
 body,
@@ -45,8 +45,8 @@ html {
 	--bg: color-mix(in srgb, var(--primary), black 3%);
 	--fg: color-mix(in srgb, var(--secondary), white 40%);
 
-	--button-bg: var(--secondary);
-	--button-fg: var(--primary);
+	--button-bg: color-mix(in srgb, var(--secondary), white 30%);
+	--button-fg: color-mix(in srgb, var(--primary), black 30%);
 
 	--border: color-mix(in srgb, var(--bg), var(--fg) 10%);
 	--link: var(--secondary);
@@ -82,8 +82,15 @@ header {
 	max-width: 900px;
 	margin: 0 auto 0 auto;
 	padding: 8px 0;
-	place-items: center center;
-	text-align: center;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	text-align: left;
+}
+
+header h1 {
+	flex-basis: 100%;
 }
 
 header nav {
@@ -130,7 +137,8 @@ a:visited {
 	color: color-mix(in srgb, var(--link), var(--fg) 50%);
 }
 
-button {
+button,
+select {
 	padding: 8px 16px;
 	font-weight: bold;
 	background-color: var(--button-bg);
@@ -146,11 +154,7 @@ main {
 }
 
 #themeSwitcher {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-	align-items: center;
-	gap: 8px;
-	margin: 1em auto;
+	padding: 4px 8px;
 }
 
 button {
@@ -251,6 +255,14 @@ button:focus {
 	height: 200px;
 	object-fit: cover;
 	padding: 8px;
+}
+
+.flex {
+	display: flex;
+}
+
+.flow-column {
+	flex-direction: column;
 }
 
 .hid {

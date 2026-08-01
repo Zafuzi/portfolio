@@ -1,19 +1,22 @@
 (() => {
 	const images = document.querySelectorAll("img");
 	const viewer = document.querySelector("#viewbox");
+
+	/** @type {HTMLSelectElement} */
 	const themer = document.querySelector("#themeSwitcher");
-	const themeButtons = themer.querySelectorAll("button")
 
 	document.body.dataset.theme = localStorage.getItem("theme") ?? "blue";
 
-	themeButtons.forEach(button => {
-		button.addEventListener("click", (ev) => {
-			ev.preventDefault();
+	themer.options.namedItem("theme-" + document.body.dataset.theme).selected = true;
 
-			document.body.dataset.theme = button.dataset.theme;
-			localStorage.setItem("theme", button.dataset.theme);
-		});
-	})
+	themer.addEventListener("change", (ev) => {
+		ev.preventDefault();
+
+		const theme = themer.selectedOptions.item(0).value;
+
+		document.body.dataset.theme = theme;
+		localStorage.setItem("theme", theme);
+	});
 
 	document.addEventListener("keydown", (ev) => {
 		switch (ev.key) {
