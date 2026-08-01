@@ -1,5 +1,5 @@
 (() => {
-	const images = document.querySelectorAll(".gallery img");
+	const images = document.querySelectorAll("img");
 	const viewer = document.querySelector("#viewbox");
 	const themer = document.querySelector("#themeSwitcher");
 	const themeButtons = themer.querySelectorAll("button")

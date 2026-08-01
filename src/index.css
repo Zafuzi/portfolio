@@ -236,6 +236,23 @@ button:focus {
 	display: none;
 }
 
+#projects ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+}
+
+#projects ul li {
+	padding: 16px;
+}
+
+#projects ul li img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	padding: 8px;
+}
+
 .hid {
 	display: none;
 }
