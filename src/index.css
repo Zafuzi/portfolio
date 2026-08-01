@@ -81,12 +81,13 @@ ul li {
 header {
 	max-width: 900px;
 	margin: 0 auto 0 auto;
-	padding: 8px 0;
+	padding: 8px 16px;
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: space-between;
 	text-align: left;
+	gap: 16px;
 }
 
 header h1 {
@@ -109,10 +110,11 @@ main,
 footer {
 	max-width: 800px;
 	margin: 0 auto;
+	padding: 16px;
 }
 
 section {
-	margin: 8px;
+	margin: 16px 0;
 	padding: 8px 16px;
 	background-color: color-mix(in srgb, var(--bg), white 5%);
 	border-radius: var(--radius);
