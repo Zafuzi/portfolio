@@ -146,11 +146,11 @@ main {
 }
 
 #themeSwitcher {
-	display: flex;
-	flex-flow: row wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
 	align-items: center;
-	justify-content: center;
 	gap: 8px;
+	margin: 1em auto;
 }
 
 button {
